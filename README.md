@@ -1,5 +1,5 @@
 # TestDrivenDevelopmentXUnitShakyo
-virtualenvで環境作成を行った
+virtualenvで環境作成を行った  
 モジュール分割を書籍では行っていないがやりたかったので、実施した
 - ディレクトリ分割（src/tests）
 - setup.pyによるパッケージ化
