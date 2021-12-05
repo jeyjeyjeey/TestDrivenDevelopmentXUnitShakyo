@@ -1,9 +1,8 @@
-from . import TestCase
+from .TestCase import TestCase
 
-class WasRun(TestCase.TestCase):
-  def __init__(self, name) -> None:
-      self.wasRun = None
-      super().__init__(name)
-      
+class WasRun(TestCase):
+  def setUp(self):
+    self.wasRun = None
+    self.wasSetUp = 1
   def testMethod(self):
     self.wasRun = 1
