@@ -1,5 +1,4 @@
 from abc import abstractmethod
-from .TestResult import TestResult
 
 class TestCase:
   def __init__(self, name) -> None:
@@ -9,17 +8,16 @@ class TestCase:
   def setUp(self):
     pass
 
-  def run(self):
-    result = TestResult()
+  def run(self, result):
     result.testStarted()
     self.setUp()
     try:
       method = getattr(self, self.name)
       method()
-    except:
+    except Exception as e:
+      # print(e)
       result.testFailed()
     self.tearDown()
-    return result
 
   @abstractmethod
   def tearDown(self):
