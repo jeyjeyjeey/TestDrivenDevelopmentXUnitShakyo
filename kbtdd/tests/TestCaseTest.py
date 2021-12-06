@@ -1,7 +1,8 @@
-from kbtdd.WasRun import WasRun
 from kbtdd.TestCase import TestCase
 from kbtdd.TestResult import TestResult
 from kbtdd.TestSuite import TestSuite
+
+from WasRun import WasRun
 
 class TestCaseTest(TestCase):
   def setUp(self):

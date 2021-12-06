@@ -1,4 +1,4 @@
-from .TestCase import TestCase
+from kbtdd.TestCase import TestCase
 
 class WasRun(TestCase):
   def setUp(self):
