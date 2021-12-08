@@ -14,10 +14,10 @@ class TestCase:
     try:
       method = getattr(self, self.name)
       method()
-    except:
+    except Exception as e:
       result.testFailed()
+      result.addErrorLog(self.name, e)
     self.tearDown()
-
   @abstractmethod
   def tearDown(self):
     pass
